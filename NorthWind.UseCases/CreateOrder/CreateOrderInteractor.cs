@@ -17,7 +17,8 @@ namespace NorthWind.UseCases.CreateOrder
         readonly IOrderDetailRepository OrderDetailRepository;
         readonly IUnitOfWork UnitOfWork;
         public CreateOrderInteractor(IOrderRepository orderRepository,
-            IOrderDetailRepository orderDetailRepository, IUnitOfWork unitOfWork) =>
+            IOrderDetailRepository orderDetailRepository,
+            IUnitOfWork unitOfWork) =>
             (OrderRepository, OrderDetailRepository, UnitOfWork) =
             (orderRepository, orderDetailRepository, unitOfWork);
         public async Task<int> Handle(CreateOrderInputPort request, 
